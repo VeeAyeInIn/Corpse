@@ -28,7 +28,8 @@ public class MessageReceivedListener extends ListenerAdapter {
 				if (event.getTextChannel().getGuild().getMember(event.getAuthor()).hasPermission(command.permission())) {
 					command.execute(event, parser.args(message));
 				} else {
-					command.noPermission(event);
+					System.out.println("No Permission!");
+					command.error(event);
 				}
 			}
 		}

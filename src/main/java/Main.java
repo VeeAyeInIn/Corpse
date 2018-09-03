@@ -1,6 +1,9 @@
 import commands.core.Command;
 import commands.core.CommandParser;
+import commands.fun.EightBall;
+import commands.fun.Insult;
 import commands.informational.Ping;
+import commands.moderation.Clear;
 import listeners.MessageReceivedListener;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDABuilder;
@@ -52,6 +55,9 @@ public class Main {
 
 	private static void registerCommands() {
 		commands.put("ping", new Ping());
+		commands.put("clear", new Clear());
+		commands.put("8", new EightBall());
+		commands.put("insult", new Insult());
 		CommandParser.setCommands(commands);
 	}
 }
