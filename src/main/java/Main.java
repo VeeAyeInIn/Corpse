@@ -2,6 +2,7 @@ import commands.core.Command;
 import commands.core.CommandParser;
 import commands.fun.EightBall;
 import commands.fun.Insult;
+import commands.informational.Invite;
 import commands.informational.Ping;
 import commands.moderation.Clear;
 import listeners.MessageReceivedListener;
@@ -58,6 +59,7 @@ public class Main {
 		commands.put("clear", new Clear());
 		commands.put("8", new EightBall());
 		commands.put("insult", new Insult());
+		commands.put("invite", new Invite());
 		CommandParser.setCommands(commands);
 	}
 }
